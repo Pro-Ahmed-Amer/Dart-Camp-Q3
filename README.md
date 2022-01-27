@@ -1,5 +1,5 @@
 # Dart-Camp-Q3
-# <u>Assignment - 3</u>
+<u>Assignment - 3</u>
 
 Q \ Separate the **"Even" & "Odd"** numbers between 1-10 in this List 
 
@@ -16,7 +16,71 @@ using two functions
 - Even number => number % 2 = 0
 - Odd number => number % 2 = 1
 
-Finally, Print all of them in this way  !!!
+***
+
+1-) Method One :
+
+```dart
+main() {
+  var lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  print('-' * 30);
+  myEven(lst);
+  print('-' * 30);
+  myOdd(lst);
+  print('-' * 30);
+}
+
+myEven(lst) {
+  lst.forEach((element) {
+    if (element % 2 == 0) { /* mybe if(element % 2 != 1) */
+      print("Even = ${element}");
+    }
+  });
+}
+
+myOdd(lst) {
+  lst.forEach((element) {
+    if (element % 2 == 1) { /* mybe if(element % 2 != 0) */
+      print("Odd = ${element}");
+    }
+  });
+}
+```
+
+***
+
+2-) Method Two : 
+
+```dart
+main() {
+  var lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  print('-' * 30);
+  myEven(lst);
+  print('-' * 30);
+  myOdd(lst);
+  print('-' * 30);
+}
+
+myEven(lst) {
+  for (var i = 0; i < lst.length; i++) {
+    if (lst[i] % 2 == 0) { /* mybe if(element % 2 != 1) */
+      print("Even = ${lst[i]}");
+    }
+  }
+}
+
+myOdd(lst) {
+  for (var i = 0; i < lst.length; i++) {
+    if (lst[i] % 2 == 1) { /* mybe if(element % 2 != 0) */
+      print("Odd = ${lst[i]}");
+    }
+  }
+}
+```
+
+***
+
+Output :
 
 ```
 ------------------------------
